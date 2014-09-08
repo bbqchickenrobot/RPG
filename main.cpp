@@ -1,15 +1,8 @@
-#include "stdafx.h"
+//#include "stdafx.h" - this does basically nothing
 #include <string>
 #include <iostream>
-#include <windows.h> 
+//#include <windows.h> - b-but mah gahnoo..
 using namespace std;
-
-void typewrite(char text[]){
-	for (unsigned int x = 0; x < strlen(text); x++) { 
-		cout << text[x]; 
-        Sleep(100); 
-    }
-}
 
 void pause(){
 	cout << "\nPress any key to continue..." << endl;
@@ -61,17 +54,14 @@ int main(){
 	player.weapon;
 	player.planet;
 
-	char openingDialog[] = { 
-		"You wake up and find yourself stranded on a mysterious spaceship in outer space.\nNo memory of how you got there. You only know what your name is.\nYou are approached by an unknown human...\n\n" 
+	char openingDialog[] = {
+		"You wake up and find yourself stranded on a mysterious spaceship in outer space.\nNo memory of how you got there. You only know what your name is.\nYou are approached by an unknown human...\n\n"
     };
 
-	typewrite(openingDialog);
-	pause();
+	cout << openingDialog;
 
 	falco.speak("Human: Hello.");
-	pause();
 	player.speak("You: Where am I? Who are you?");
-	pause();
 	falco.speak("Human: My name is Falco. We found you unconscious on the moon during our mission.\nYou're a little banged up but should heal in no time. What is your name?");
 	cin >> player.name;
 	player.speak("You: My name is " + player.name);
@@ -80,10 +70,5 @@ int main(){
 	falco.speak("Falco: What is your race?");
 	cin >> player.race;
 	falco.speak("Falco: You are a " + player.race + " from " + player.planet + "...Interesting");
-
-
-
-
-	system("pause");
 	return 0;
 }
