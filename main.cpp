@@ -64,9 +64,7 @@ int main(){
 	player.weapon;
 	player.planet;
 
-	const char openingDialog[] = { 
-		"You wake up and find yourself stranded on a mysterious spaceship in outer space.\nNo memory of how you got there. You only know what your name is.\nYou are approached by an unknown human...\n\n" 
-    };
+	const char *openingDialog = "You wake up and find yourself stranded on a mysterious spaceship in outer space.\nNo memory of how you got there. You only know what your name is.\nYou are approached by an unknown human...\n\n";
 
 	typewrite(openingDialog);
 	system("pause");
