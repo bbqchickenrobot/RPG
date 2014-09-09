@@ -2,10 +2,9 @@
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
-#include <array>
 using namespace std;
 
-void typewrite(char text[]){
+void typewrite(const char *text){
 	for (unsigned int x = 0; x < strlen(text); x++) { 
 		cout << text[x]; 
         Sleep(20); 
@@ -65,7 +64,7 @@ int main(){
 	player.weapon;
 	player.planet;
 
-	char openingDialog[] = { 
+	const char openingDialog[] = { 
 		"You wake up and find yourself stranded on a mysterious spaceship in outer space.\nNo memory of how you got there. You only know what your name is.\nYou are approached by an unknown human...\n\n" 
     };
 
